@@ -25,3 +25,7 @@ body {
   grid-template-columns: repeat(16, 50px [col-start]);
   grid-template-rows: repeat(16, 50px [row-start]);
 }
+
+.hover {
+  background-color: black;
+}
