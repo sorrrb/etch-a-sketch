@@ -6,6 +6,7 @@ N/A
 
 ### Changelog
 6/20/2022 13:00 - initialize repository
+6/20/2022 16:04 - complete basic cursor trail logic to change background color
 
 ### Languages
 - HTML
@@ -14,6 +15,11 @@ N/A
 
 ### Concepts
 - CSS Grid
+- Node properties/methods
+- Nodelists & Grouping nodes
+- Event Listeners
+- Event Capture/Bubbling & Propogation
+- JavaScript console debugging
 
 ## Attribution(s)
 N/A
