@@ -13,8 +13,6 @@ body {
   box-sizing: border-box;
   background-color: salmon;
   font-family: 'Fascinate', cursive;
-
-  padding: 2% 0 5% 0;
 }
 
 /* ============================== *\
@@ -29,7 +27,7 @@ body {
 }
 
 .page-content {
-  padding: 0 5%;
+  padding: 2% 5%;
   margin-top: 5%;
 
   display: flex;
@@ -44,5 +42,4 @@ body {
 
 .sketch {
   border: 1px solid black;
-  width: 600px;
 }
