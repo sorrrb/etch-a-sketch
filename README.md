@@ -6,7 +6,9 @@ N/A
 
 ### Changelog
 6/20/2022 13:00 - initialize repository<br>
-6/20/2022 16:04 - complete basic cursor trail logic to change background color
+6/20/2022 16:04 - complete basic cursor trail logic to change background color<br>
+6/20/2022 19:30 - complete initial deployment with basic functionality<br>
+6/20/2022 20:30 - improve visual design of initial deployment<br>
 
 ### Languages
 - HTML
