@@ -18,11 +18,17 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
+  padding: 2% 0 0 0;
 }
 
 /* ============================== *\
     Page Structure
 \* ============================== */
+
+.title, .controls {
+  margin-bottom: 24px;
+}
 
 .title {
   font-size: 48px;
@@ -32,11 +38,13 @@ body {
 }
 
 .container {
-  width: 60%;
-  height: 60%;
+  flex: 2;
+  width: 50%;
+  height: auto;
   background-color: #ABB0B6;
-  border: 36px solid red;
-  border-radius: 1%;
+  border: 36px solid #D1001C;
+  border-radius: 2%;
+  margin-bottom: 48px;
 }
 
 .controls {
@@ -52,20 +60,42 @@ body {
   padding: 8px 24px;
 
   background-color: salmon;
-  border: 6px solid red;
+  border: 6px solid #D1001C;
   border-radius: 16px;
-  color: black;
+  color: whitesmoke;
   font-size: 16px;
   font-family: monospace, 'Courier New', Courier;
   font-weight: 600;
   box-shadow: 0px 1px 144px 1px white;
 }
 
-.info {
-  font-size: 24px;
-  margin-top: 12px;
+button:hover {
+  cursor: pointer;
 }
 
-.update-size, .update-color {
+.info {
+  font-size: 24px;
+}
+
+#size, #color {
   border-top: 1px solid black;
+}
+
+.footer {
+  padding: 16px 0;
+  width: 100%;
+  background-color: hsla(6, 69%, 35%, 1);
+  color: whitesmoke;
+  font-family: monospace;
+  font-size: 18px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon {
+  max-width: 40px;
+  max-height: 40px;
 }
