@@ -1,82 +1,51 @@
 let display = () => {
-  const DEFAULT = 16;
-  const MAX_WIDTH = 720;
+  const WINDOW_SIZE = 600;
+  const DEFAULT_LENGTH = 16;
 
-  // Create div in memory, add container class, append to body
-  const newContainer = document.createElement('div');
-  newContainer.classList.add('container');
-  document.body.appendChild(newContainer);
-
-  // Get reference to container
-  // Get reference to parent of container
-  // Create button in memory, add text, style button, insert button in parent before container
-  const containerNode = document.querySelector('div.container');
-  const pageNode = containerNode.parentNode;
-  const dimensionsBtn = document.createElement('button');
-  dimensionsBtn.textContent = `Change Size`;
-  const btnStyle = dimensionsBtn.style;
-  btnStyle.cssText = `background-color: black; color: rgb(240, 234, 214); border: 2px solid rgb(240, 234, 214); padding: 8px 32px; border-radius: 16px;`;
-  pageNode.insertBefore(dimensionsBtn, containerNode);
-
-  const titleStyle = (document.querySelector('h1')).style;
-  titleStyle.cssText = `color: rgb(240, 234, 214); border-top: 2px solid rgb(240, 234, 214); border-bottom: 2px solid rgb(240, 234, 214); padding: 16px;`;
-
-  // Add event listener to button for changing grid dimensions
-  dimensionsBtn.addEventListener('click', defineSize);
-
-  // Define default style for grid
-
-  containerNode.style.cssText = createArea(DEFAULT);
-
-  // Node Style Helper Functions
-
-  function createSq(cntX, cntY) {
-    return `grid-area: ${cntY} / ${cntX} / ${cntY + 1} / ${cntX + 1};`;
+  const SKETCH_PAD_REF = document.querySelector('div.sketch'); // Grab container reference
+  const SKETCH_PAD_STYLE = SKETCH_PAD_REF.style; // Grab reference style object
+  SKETCH_PAD_STYLE.cssText = calcDimensions(DEFAULT_LENGTH); // Generate grid using helper function
+  
+  // Helper function to determine grid size based off WINDOW_SIZE const & given length/width value
+  function calcDimensions(squares) {
+    const output = WINDOW_SIZE / squares;
+    return `display: grid; grid-template-columns: repeat(${squares}, ${output}px); grid-template-rows: repeat(${squares}, ${output}px)`;
   }
 
-  function createArea(sideLength) {
-    return `display: grid; grid-template-columns: repeat(${sideLength}, ${MAX_WIDTH / sideLength}px [col-start]); grid-template-rows: repeat(${sideLength}, ${MAX_WIDTH / sideLength}px [row-start]);`
+  // Named callback function for tracking event listener
+  function colorBlack(e) {
+    e.target.style['background-color'] = 'black';
   }
 
-  // Event Listener Helper Functions
-
-  function styleBackground(e) {
-    e.target.classList.add('hover');
+  // Named callback function for clearing grid
+  let clearGrid = () => {
+    SKETCH_PAD_REF.replaceChildren();
+    generateGrid(DEFAULT_LENGTH);
   }
 
-  function defineSize() {
-    const input = prompt(`Please enter grid dimensions:`)
-    if (input === null) return;
-    const inputNum = Number(input);
-    if ((inputNum > 100) || (inputNum < 1)) {
-      alert('Error! Grid dimension boundaries exceeded - please enter a number between 1-100.');
-      defineSize();
-    }
-    else if ((inputNum <= 100) || (inputNum >= 1)){
-      containerNode.replaceChildren();
-      containerNode.style.cssText = createArea(inputNum);
-      generateGrid(input);
-    }
-  }
-
-  // Function to generate Grid
-
+  // Grid initialization function
   let generateGrid = size => {
+    SKETCH_PAD_STYLE.cssText = calcDimensions(size);
     for (let i = 1; i <= size; i++) {
       for (let j = 1; j <= size; j++) {
         const cell = document.createElement('div');
-        cell.style.cssText = createSq(j,i);
-        cell.classList.add(`cell`);
-        containerNode.appendChild(cell);
+        cell.classList.add('grid-cell');
+        cell.style.cssText = `grid-area: ${i} / ${j} / ${i + 1} / ${j + 1};`;
+        SKETCH_PAD_REF.appendChild(cell);
       }
     }
-    const squares = document.querySelectorAll('div.cell');
-    squares.forEach((cell) => {
-      cell.addEventListener('mouseenter', styleBackground);
+    const CELLS = document.querySelectorAll('div.grid-cell');
+    CELLS.forEach((cell) => { // iterate through each cell
+      cell.addEventListener('mouseenter', colorBlack); // add event tracking listener
     });
   }
 
-  generateGrid(DEFAULT);
+  const SIZE_BTN = document.querySelector('button.size');
+
+  const CLEAR_BTN = document.querySelector('button.clear');
+  CLEAR_BTN.addEventListener('click', clearGrid);
+
+  generateGrid(DEFAULT_LENGTH);
 }
 
 display();
