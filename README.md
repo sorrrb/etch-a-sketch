@@ -2,7 +2,7 @@
 A webpage implementation of the classic mechanical toy "Etch-A-Sketch"
 
 ## Demo Preview
-N/A
+![Etch-A-Sketch Demo](./resources/demo.png)
 
 ### Changelog
 6/20/2022 13:00 - initialize repository<br>
@@ -25,3 +25,8 @@ N/A
 
 ## Attribution(s)
 N/A
+
+#### To-Do
+- Add footer
+- Add button to change color mode
+- Improve general page layout

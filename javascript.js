@@ -19,7 +19,7 @@ let display = () => {
   pageNode.insertBefore(dimensionsBtn, containerNode);
 
   const titleStyle = (document.querySelector('h1')).style;
-  titleStyle.cssText = `color: rgb(240, 234, 214); border-top: 2px solid rgb(240, 234, 214); border-bottom: 2px solid rgb(240, 234, 214); padding: 16px;`
+  titleStyle.cssText = `color: rgb(240, 234, 214); border-top: 2px solid rgb(240, 234, 214); border-bottom: 2px solid rgb(240, 234, 214); padding: 16px;`;
 
   // Add event listener to button for changing grid dimensions
   dimensionsBtn.addEventListener('click', defineSize);
