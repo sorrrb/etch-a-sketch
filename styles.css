@@ -11,21 +11,24 @@ body {
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
+
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  background-color: gray;
 }
 
 /* ============================== *\
     PLACEHOLDER
 \* ============================== */
 
-.grid-template {
-  display: grid;
-  grid-template-columns: repeat(16, 50px [col-start]);
-  grid-template-rows: repeat(16, 50px [row-start]);
-}
-
 .hover {
   background-color: black;
+}
+
+.container {
+  background-color: rgb(240, 234, 214);
+  border: 1px solid black;
+  box-shadow: 0 8px 12px 0 hsla(0, 0%, 0%, 0.2), 0 12px 18px 0 hsla(0, 0%, 0%, 0.3);
 }
