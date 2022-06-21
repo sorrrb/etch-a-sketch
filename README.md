@@ -2,7 +2,9 @@
 A webpage implementation of the classic mechanical toy "Etch-A-Sketch"
 
 ## Demo Preview
-![Etch-A-Sketch Demo](./resources/demo.png)
+![Etch-A-Sketch Demo first image](./resources/demo.png)
+![Etch-A-Sketch Demo second image](./resources/demo2.png)
+![Etch-A-Sketch Demo third image](./resources/demo3.png)
 
 ### Changelog
 6/20/2022 13:00 - initialize repository<br>
