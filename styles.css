@@ -44,6 +44,10 @@ body {
   gap: 32px;
 }
 
+.wrapper {
+  text-align: center;
+}
+
 .wrapper > button {
   padding: 8px 24px;
 
@@ -52,6 +56,16 @@ body {
   border-radius: 16px;
   color: black;
   font-size: 16px;
+  font-family: monospace, 'Courier New', Courier;
   font-weight: 600;
   box-shadow: 0px 1px 144px 1px white;
+}
+
+.info {
+  font-size: 24px;
+  margin-top: 12px;
+}
+
+.update-size, .update-color {
+  border-top: 1px solid black;
 }
