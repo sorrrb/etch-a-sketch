@@ -1,7 +1,7 @@
-# etch-a-sketch
+# js-etch-a-sketch
 A webpage implementation of the classic mechanical toy "Etch-A-Sketch"<br>
 
-[Live Demo](https://sorrrb.github.io/etch-a-sketch/)
+[Live Demo](https://sorrrb.github.io/js-etch-a-sketch/)
 
 ## Demo Preview
 ![Etch-A-Sketch Demo first image](./resources/demoblack.png)
