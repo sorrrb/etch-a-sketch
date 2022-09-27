@@ -1,4 +1,4 @@
-# js-etch-a-sketch
+# etch-a-sketch
 A webpage implementation of the classic mechanical toy "Etch-A-Sketch"<br>
 
 [Live Demo](https://sorrrb.github.io/js-etch-a-sketch/)
