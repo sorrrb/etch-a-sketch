@@ -162,7 +162,7 @@ a:visited {
 .foot, .foot a {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .foot {
@@ -171,7 +171,11 @@ a:visited {
 }
 
 .foot a {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+}
+
+.foot p {
+  font-weight: 700;
 }
 
 .foot img {

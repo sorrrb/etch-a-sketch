@@ -1,20 +1,11 @@
 # etch-a-sketch
-A webpage implementation of the classic mechanical toy "Etch-A-Sketch"<br>
+A webpage implementation of an Etch-A-Sketch using JavaScript<br>
 
-[Live Demo](https://sorrrb.github.io/js-etch-a-sketch/)
+[Live Demo](https://sorrrb.github.io/etch-a-sketch/)
 
 ## Demo Preview
-![Etch-A-Sketch Demo first image](./resources/demoblack.png)
-![Etch-A-Sketch Demo second image](./resources/demorgb.png)
-![Etch-A-Sketch Demo third image](./resources/demowhite.png)
-![Etch-A-Sketch Demo fourth image](./resources/demohsl.png)
-
-### Changelog
-6/20/2022 13:00 - initialize repository<br>
-6/20/2022 16:04 - complete basic cursor trail logic to change background color<br>
-6/20/2022 19:30 - complete initial deployment with basic functionality<br>
-6/20/2022 20:30 - improve visual design of initial deployment<br>
-6/21/2022 20:10 - complete second iteration of project with improved visual design/functionality<br>
+![Etch-A-Sketch Preview](./resources/demo.png)
+![Etch-A-Sketch Rainbow Preview](./resources/demorgb.png)
 
 ### Languages
 - HTML
@@ -22,16 +13,14 @@ A webpage implementation of the classic mechanical toy "Etch-A-Sketch"<br>
 - JavaScript (vanilla - ES6)
 
 ### Concepts
-- CSS Grid
-- Node properties/methods
-- Nodelists & Grouping nodes
+- Codebase refactoring
+- CSS Flexbox/Grid
+- Closure
+- Object methods & properties
 - Event Listeners
-- Event Capture/Bubbling & Propogation
-- JavaScript console debugging
-- Git & Command Line proficiency
+- Hoisting
+- Named/Arrow/Anonymous functions
+- Single Responsibility Principle structure (attempted/work-in-progress)
 
 ## Attribution(s)
 [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) (https://icon54.com) - GitHub SVG icon usage in footer
-
-#### To-Do
-N/A
