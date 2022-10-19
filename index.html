@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Etch-A-Sketch</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="">
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./javascript.js" defer></script>
-  </head>
-  <body>
-    <div class="title">Etch-A-Sketch</div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+  <title>Etch-A-Sketch</title>
+</head>
+<body>
+  
+  <div class="page-wrapper">
 
-    <div class="controls">
+    <h1 class="head">Etch-A-Sketch</h1>
 
-      <div class="wrapper">
-        <button class="size">SIZE</button>
-        <p class="info">Current Mode:<br>
-          <span id="size">16x16</span>
-        </p>
+    <div class="content">
+
+      <div class="sidebar">
+
+        <div class="color-wrapper">
+          <label for="recolor">Color</label>
+          <input type="color" id="recolor">
+        </div>
+
+        <div class="mode-wrapper">
+          <button class="rainbow">Rainbow</button>
+          <button class="opaque">Opaque</button>
+        </div>
+
+        <div class="size-wrapper">
+          <label for="resize">Size</label>
+          <input type="range" id="resize" min="1" max="9">
+          <p>16 x 16</p>
+        </div>
+
+        <button class="reset">Reset</button>
+  
       </div>
-
-      <div class="wrapper">
-        <button class="clear">CLEAR</button>
-      </div>
-
-      <div class="wrapper">
-        <button class="color">COLOR</button>
-        <p class="info">Current Mode:<br>
-          <span id="color">Black</span>
-        </p>
+  
+    
+      <div class="grid">
+        
       </div>
 
     </div>
 
-    <div class="container"></div>
-    <div class="footer">
-      Created by: sorrrb
-      <a href="https://github.com/sorrrb"><img class="icon" src="./resources/github.png" alt="GitHub Logo"></a>
+    <div class="foot">
+      Created by:
+      <a href="https://github.com/sorrrb">
+        <p>sorrrb</p>
+        <img src="./resources/github.png" alt="">
+      </a>
     </div>
-  </body>
+
+  </div>
+
+</body>
 </html>
